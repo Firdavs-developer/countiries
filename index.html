@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countiries</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- npx tailwindcss -i ./css/input.css -o ./css/main.css --watch -->
+</head>
+<body>
+    <!-- HEADER START -->
+    <header class="text-gray-600 body-font bg-white dark:text-white dark:bg-[#202C36] dark:transition-colors border-b-2">
+        <div class="container mx-auto flex flex-wrap justify-between p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl dark:text-white">Countiries</span>
+            </a>
+
+            <button class="theme-btn inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0 dark:text-black">
+                <h1 class="mode-text">theme</h1>
+            </button>
+        </div>
+    </header>
+    <!-- HEADER END -->
+
+
+    <!-- MAIN START -->
+    <main>
+        <!-- HERO START -->
+        <section class="hero text-gray-600 body-font bg-gray-200 dark:bg-[#202C36]">
+            <div class="max-w-[90%] pt-24 px-5 mx-auto flex justify-between flex-wrap">
+                <form class="search-country">
+                    <input class="country-input py-3 px-4 w-[300px] rounded-lg dark:bg-[#3b4a58] placeholder:text-black dark:placeholder:text-white " type="search" placeholder="Search Countiry...">
+                </form>
+
+                <select id="countries" class="select-country bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[300px] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option class="region-option">Filter by Region</option>
+                    <option class="region-option" value="Africa">Africa</option>
+                    <option class="region-option" value="America">America</option>
+                    <option class="region-option" value="Asia">Asia</option>
+                    <option class="region-option" value="Europe">Europe</option>
+                    <option class="region-option" value="Oceania">Oceania</option>
+                  </select>
+            </div>
+            <div class="max-w-[90%] px-5 py-24 mx-auto">
+              <div class="cards flex flex-wrap -m-4">
+
+              </div>
+            </div>
+          </section>
+        <!-- HERO END -->
+    </main>
+    <!-- MAIN END -->
+
+
+
+    <template class="hero-template">
+        <div class="card xl:w-1/4 md:w-1/2 p-4 cursor-pointer">
+            <div class="bg-gray-100 rounded-lg dark:bg-[#3b4a58]">
+              <img class="countiry-img  rounded  w-full object-cover object-center mb-6" src="https://dummyimage.com/720x400" alt="content">
+              <h2 class="countiry-name text-lg text-gray-900 font-medium title-font mb-4 px-4 dark:text-white">Chichen Itza</h2>
+              <p class="countiry-desc leading-relaxed text-base px-4 pb-4 dark:text-white" >Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+            </div>
+          </div>
+    </template>
+
+
+
+
+    <script src="./js/darkMode.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
