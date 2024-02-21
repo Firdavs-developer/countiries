@@ -14,10 +14,11 @@ const resultCountiry = () =>{
     fetch(COUNTIRIES_URL).then(res => res.json())
     .then(data => {
         data.slice(0, 10).forEach((countiry) => {
+            console.log(countiry.region);
             let elCloneHeroTemplate = elHeroTemplate.cloneNode(true);
             elCloneHeroTemplate.querySelector(".countiry-img").src = countiry.flags.png;
             elCloneHeroTemplate.querySelector(".countiry-name").textContent = countiry.name.official;
-            elCloneHeroTemplate.querySelector(".countiry-desc").textContent = countiry.flags.alt;
+            elCloneHeroTemplate.querySelector(".countiry-desc").textContent = `Region: ${countiry.region}`;
             elFragment.append(elCloneHeroTemplate);
             elCards.appendChild(elFragment)
         })
@@ -36,7 +37,7 @@ elSearchCountry.addEventListener("submit", (evt) => {
             let elCloneHeroTemplate = elHeroTemplate.cloneNode(true);
             elCloneHeroTemplate.querySelector(".countiry-img").src = countiry.flags.png;
             elCloneHeroTemplate.querySelector(".countiry-name").textContent = countiry.name.official;
-            elCloneHeroTemplate.querySelector(".countiry-desc").textContent = countiry.flags.alt;
+            elCloneHeroTemplate.querySelector(".countiry-desc").textContent =  `Region: ${countiry.region}`;
             elFragment.append(elCloneHeroTemplate);
             elCards.appendChild(elFragment)
         })
@@ -53,7 +54,7 @@ elSelectCountry.addEventListener("change", () => {
             let elCloneHeroTemplate = elHeroTemplate.cloneNode(true);
             elCloneHeroTemplate.querySelector(".countiry-img").src = countiry.flags.png;
             elCloneHeroTemplate.querySelector(".countiry-name").textContent = countiry.name.official;
-            elCloneHeroTemplate.querySelector(".countiry-desc").textContent = countiry.flags.alt;
+            elCloneHeroTemplate.querySelector(".countiry-desc").textContent =  `Region: ${countiry.region}`;
             elFragment.append(elCloneHeroTemplate);
             elCards.appendChild(elFragment)
         })
